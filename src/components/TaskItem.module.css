@@ -1,0 +1,126 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.item.todo {
+  border-left: 4px solid #6b7280;
+}
+
+.item.in_progress {
+  border-left: 4px solid #3b82f6;
+}
+
+.item.done {
+  border-left: 4px solid #22c55e;
+  opacity: 0.7;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title:hover {
+  color: #3b82f6;
+}
+
+.editInput {
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.dueDate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.dueDate.overdue {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.dateInput {
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: none;
+  opacity: 0;
+  position: absolute;
+}
+
+.dueDateText {
+  cursor: pointer;
+}
+
+.dueDateText:hover {
+  color: #3b82f6;
+}
+
+.dueDate:focus-within .dateInput {
+  width: auto;
+  height: auto;
+  padding: 0.25rem;
+  border: 1px solid #d1d5db;
+  opacity: 1;
+  position: static;
+}
+
+.dueDate:focus-within .dueDateText {
+  display: none;
+}
+
+.statusSelect {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.status_todo {
+  color: #6b7280;
+}
+
+.status_in_progress {
+  color: #3b82f6;
+}
+
+.status_done {
+  color: #22c55e;
+}
+
+.deleteButton {
+  padding: 0.25rem 0.5rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.deleteButton:hover {
+  color: #ef4444;
+}
